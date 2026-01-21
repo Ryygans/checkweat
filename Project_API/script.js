@@ -7,6 +7,7 @@ searchButton.addEventListener('click', function() {
     .then((response) => response.json())
     .then((data) => {
         result.innerHTML = `
+            <h3 class="text-2xl mb-3 text-center text-red-600 font-zalando font-semibold">Result!</h3>
             <h2 style="margin-bottom: 15px;">${data.name}, ${data.sys.country}</h2>
             <h5><span class="temp">${data.main.temp} °C</span> <span class="temp">${data.weather[0].description}</span></h5>
             <p style="margin-bottom: 17px;">Temperature from ${data.main.temp_min} °C to ${data.main.temp_max} °C</p>
